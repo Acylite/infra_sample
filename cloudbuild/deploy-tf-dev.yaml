@@ -1,0 +1,29 @@
+---
+steps:
+- id: tf-init
+  name: 'hashicorp/terraform:1.5.7'
+  dir: '/workspace/infra'
+  args: ['init', '-reconfigure', '-backend-config=bucket=${_PROJECT_ID}-tf-state', '-no-color']
+
+- id: tf-plan
+  name: 'hashicorp/terraform:1.5.7'
+  dir: '/workspace/infra'
+  entrypoint: sh
+  args:
+    - -c
+    - |
+      terraform plan --var-file=environments/${_ENVIRONMENT}/variables.tfvars -no-color 
+
+- id: tf-apply
+  name: 'hashicorp/terraform:1.5.7'
+  dir: '/workspace/infra'
+  entrypoint: sh
+  args:
+    - -c
+    - |
+      terraform apply --var-file=environments/${_ENVIRONMENT}/variables.tfvars -auto-approve -no-color
+        
+options:
+  logging: CLOUD_LOGGING_ONLY
+# 20m build timeout
+timeout: 7200s

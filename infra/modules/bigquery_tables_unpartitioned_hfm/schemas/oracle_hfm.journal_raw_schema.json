@@ -1,0 +1,62 @@
+[
+    {
+        "name": "scenario",
+        "type": "STRING"
+    },
+    {
+        "name": "year",
+        "type": "INTEGER"
+    },
+    {
+        "name": "period",
+        "type": "STRING"
+    },
+    {
+        "name": "view",
+        "type": "STRING"
+    },
+    {
+        "name": "entity",
+        "type": "STRING"
+    },
+    {
+        "name": "currency",
+        "type": "STRING"
+    },
+    {
+        "name": "account",
+        "type": "STRING"
+    },
+    {
+        "name": "icp",
+        "type": "STRING"
+    },
+    {
+        "name": "custom1",
+        "type": "STRING"
+    },
+    {
+        "name": "custom2",
+        "type": "STRING"
+    },
+    {
+        "name": "custom3",
+        "type": "STRING"
+    },
+    {
+        "name": "custom4",
+        "type": "STRING"
+    },
+    {
+        "name": "journaltype",
+        "type": "STRING"
+    },
+    {
+        "name": "amount",
+        "type": "FLOAT"
+    },
+    {
+        "name": "description",
+        "type": "STRING"
+    }
+]

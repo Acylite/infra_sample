@@ -1,0 +1,17 @@
+# Terraform
+infra/tf.plan
+infra/.terraform
+infra/.terraform.lock.hcl
+*.tfstate
+
+
+#IDEs
+.vscode/
+.idea/
+
+#Python
+*.pyc
+.pytest_cache/
+
+services/extraction_service_docai/requirements.txt
+**/.DS_Store
